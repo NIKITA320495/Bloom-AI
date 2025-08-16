@@ -1,0 +1,7 @@
+user_id,name,dob,height,weight,smoking,alcohol,disease,medication,irregular_periods
+user_001,Sarah Johnson,1978-03-15,"5'6""","145 lbs",non-smoker,occasional,"none","none",yes
+user_002,Maria Rodriguez,1982-08-22,"5'4""","130 lbs",non-smoker,rare,,multivitamin,no
+user_003,Emily Carter,1975-11-05,"5'8""","160 lbs",smoker,regular,"diabetes type 2","metformin 500mg twice daily;vitamin D",yes
+user_004,Aisha Khan,1979-01-30,"5'5""","155 lbs",non-smoker,none,"hypothyroidism;anxiety","levothyroxine 50mcg;sertraline 25mg",yes
+user_005,Linda Chen,1976-06-10,"5'3""","128 lbs",former-smoker,occasional,osteopenia,"alendronate weekly",yes
+user_006,Fatima Al-Sayed,1980-09-18,"5'7""","150 lbs",non-smoker,occasional,,,no

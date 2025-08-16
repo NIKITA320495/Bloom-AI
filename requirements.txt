@@ -1,0 +1,12 @@
+flask
+flask-cors
+python-dotenv
+langchain
+langchain-ibm
+langchain-community
+chromadb
+beautifulsoup4
+requests
+ibm-watsonx-ai
+ibm-watson-machine-learning
+twilio

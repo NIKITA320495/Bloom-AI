@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "user_id": "user_001",
+      "name": "Sarah Johnson",
+      "dob": "1978-03-15",
+      "height": "5'6\"",
+      "weight": "145 lbs",
+      "smoking": "non-smoker",
+      "alcohol": "occasional",
+      "disease": ["hypertension", "osteoporosis"],
+      "medication": ["lisinopril 10mg daily", "calcium supplement"],
+      "irregular_periods": "yes"
+    }
+  ]
+}
