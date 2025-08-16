@@ -2,7 +2,7 @@
 
 ## Overview
 
-Bloom is an intelligent multi-agent conversational AI system designed to provide comprehensive support for women navigating menopause. Built using IBM Watsonx and powered by the Granite-3-8B-Instruct model, Bloom offers personalized guidance across four specialized domains: general menopause education, health consultations, diet & nutrition, and exercise & fitness.
+Bloom is an intelligent multi-agent conversational AI system designed to provide comprehensive support for women navigating menopause. Built using IBM Watsonx and powered by the Granite-3-8B-Instruct model on IBM Cloud, Bloom offers personalized guidance across four specialized domains: general menopause education, health consultations, diet & nutrition, and exercise & fitness.
 
 The system features a sophisticated multi-agent architecture where an orchestrator intelligently routes user queries to specialized agents, ensuring users receive expert-level, contextual responses tailored to their specific needs and health profiles.
 
@@ -153,6 +153,20 @@ Bloom leverages several key IBM technologies to provide intelligent menopause he
 - **Compliance**: IBM's enterprise security standards for healthcare applications
 - **Environment Management**: Secure credential handling through environment variables
 
+### ☁️ **IBM Cloud Infrastructure**
+- **Data Storage**: Secure cloud-based storage for user profiles and health data
+- **Usage**:
+  - User data management (`data/userData.csv`, `data/user_data.json`)
+  - Symptom logging and tracking (`data/userLogData.csv`)
+  - Conversation history persistence
+  - Real-time data synchronization across platforms
+- **Benefits**: 
+  - Enterprise-grade security and compliance
+  - Scalable storage infrastructure
+  - High availability and data redundancy
+  - HIPAA-compliant data handling for healthcare applications
+- **Integration**: Seamless connectivity with Watsonx services for unified data access
+
 ## WhatsApp Feature
 
 ### 📱 Conversational WhatsApp Experience
@@ -181,35 +195,79 @@ Bloom extends its intelligence to WhatsApp through Twilio integration, offering 
 ## File Structure
 
 ```
-Bloom/
-├── .env                          # Environment variables (create from .env.example)
-├── .gitignore                    # Git ignore rules
+Bloom-AI/
 ├── app.py                        # Main Flask application with REST endpoints
-├── requirements.txt              # Python dependencies
 ├── README.md                     # Project documentation
+├── requirements.txt              # Python dependencies
 │
 ├── agents/                       # Core AI agent modules
-│   ├── orchestrator.py          # Main orchestration engine
 │   ├── basic_query.py           # General menopause information agent
 │   ├── consultation.py          # Medical consultation agent
 │   ├── diet.py                  # Nutrition and diet agent
 │   ├── exercise.py              # Fitness and exercise agent
-│   └── __pycache__/             # Python cache files
-│
-├── whatsapp_connection/          # WhatsApp integration module
-│   ├── __init__.py              # Package initialization
-│   ├── whatsapp_connection.py   # Main WhatsApp bot implementation
-│   ├── whatsapp_orchestrator.py # WhatsApp-specific orchestration
-│   └── __pycache__/             # Python cache files
+│   └── orchestrator.py          # Main orchestration engine
 │
 ├── data/                         # User data and configuration
-│   ├── userData.csv             # User profiles and demographics
-│   ├── userLogData.csv          # Symptom logs and tracking data
+│   ├── url.json                 # Configuration URLs
 │   ├── user_data.json           # JSON user data format
-│   └── url.json                 # Configuration URLs
+│   ├── userData.csv             # User profiles and demographics
+│   └── userLogData.csv          # Symptom logs and tracking data
 │
-└── templates/                    # Web interface templates
-    └── index.html               # Main web application interface
+├── frontend/                     # Next.js frontend application
+│   ├── components.json          # shadcn/ui component configuration
+│   ├── next-env.d.ts           # Next.js TypeScript declarations
+│   ├── next.config.ts          # Next.js configuration
+│   ├── package.json            # Frontend dependencies
+│   ├── postcss.config.mjs      # PostCSS configuration
+│   ├── tailwind.config.ts      # Tailwind CSS configuration
+│   ├── tsconfig.json           # TypeScript configuration
+│   │
+│   ├── docs/                   # Frontend documentation
+│   │   └── blueprint.md        # Frontend architecture blueprint
+│   │
+│   └── src/                    # Frontend source code
+│       ├── app/                # Next.js app router pages
+│       │   ├── favicon.ico     # Site favicon
+│       │   ├── globals.css     # Global CSS styles
+│       │   ├── layout.tsx      # Root layout component
+│       │   ├── page.tsx        # Home page
+│       │   ├── ai-chat/        # AI chat interface
+│       │   ├── calendar/       # Calendar functionality
+│       │   ├── consultation/   # Consultation interface
+│       │   ├── home/          # Home dashboard
+│       │   ├── profile/       # User profile management
+│       │   ├── register/      # User registration
+│       │   ├── reports/       # Health reports
+│       │   └── settings/      # Application settings
+│       │
+│       ├── components/         # Reusable React components
+│       │   ├── app-layout.tsx  # Main application layout
+│       │   ├── blog-card.tsx   # Blog post cards
+│       │   ├── insight-card.tsx # Health insight cards
+│       │   └── ui/            # UI component library (shadcn/ui)
+│       │
+│       ├── hooks/              # Custom React hooks
+│       │   ├── use-mobile.tsx  # Mobile device detection
+│       │   └── use-toast.ts    # Toast notifications
+│       │
+│       ├── img/                # Image assets
+│       │
+│       ├── lib/                # Utility libraries
+│       │   ├── api.ts          # API client functions
+│       │   ├── data.ts         # Data management utilities
+│       │   ├── types.ts        # TypeScript type definitions
+│       │   └── utils.ts        # General utility functions
+│       │
+│       └── types/              # TypeScript type declarations
+│           └── jsx.d.ts        # JSX type extensions
+│
+├── templates/                    # Legacy web interface templates
+│   └── index.html               # Basic HTML interface
+│
+└── whatsapp_connection/          # WhatsApp integration module
+    ├── __init__.py              # Package initialization
+    ├── whatsapp_connection.py   # Main WhatsApp bot implementation
+    └── whatsapp_orchestrator.py # WhatsApp-specific orchestration
 ```
 
 ## Installation & Setup
