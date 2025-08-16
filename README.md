@@ -396,7 +396,7 @@ print(response.json())
 2. Follow the guided conversation flow
 3. Receive personalized menopause guidance
 
-### 👥 Team  
+### 👥 Team mate
 This application was collaboratively built by
 [Nikita Babbar](https://www.linkedin.com/in/nikita-babbar-b0291026a/), 
 [Manya Joshi](https://www.linkedin.com/in/manya-joshi-ai/), 
