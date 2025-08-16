@@ -98,7 +98,6 @@ sequenceDiagram
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c36a128d-b317-4bf2-805b-599dcb307616" width="180"/>
   <img src="https://github.com/user-attachments/assets/64f22790-a78a-4534-aa34-d3041dceb4a4" width="180"/>
-  <img src="https://github.com/user-attachments/assets/40c04cbd-6187-4074-8132-4bd3df82442c" width="180"/>
   <img src="https://github.com/user-attachments/assets/e3380ddb-698b-4739-b55f-11c8eb53e980" width="180"/>
   <img src="https://github.com/user-attachments/assets/2ad0dec1-6b83-4854-bcb5-75501d11851f" width="180"/>
 </p>
